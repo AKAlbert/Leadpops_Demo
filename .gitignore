@@ -1,3 +1,7 @@
 # ignore .metadata files
 *.metadata
 */.metadata
+
+# Ignore .settings files
+*.settings
+*/.settings
