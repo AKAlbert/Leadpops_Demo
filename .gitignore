@@ -7,5 +7,5 @@
 */.settings
 
 # Ignore Test Output Folder files
-*/test-output
+*/test-output/
 
