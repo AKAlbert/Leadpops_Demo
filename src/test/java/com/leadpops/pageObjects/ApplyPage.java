@@ -16,7 +16,7 @@ WebDriver ldriver;
 		PageFactory.initElements(rdriver, this);
 	}
 	
-	@FindBy(xpath="//span[@class='form-collapse-right form-collapse-right-show']")
+	@FindBy(id="collapse-text_131")
 	WebElement borrowersDropdown;
 	
 	@FindBy(xpath="//label[@id='label_input_175_0']")
@@ -142,10 +142,40 @@ WebDriver ldriver;
 	
 	// Actions
 	
-	public void enterFirstName()
+	TestData testdata = new TestData();
+	
+	public void clickPrimaryBorrowerInfoDropdown()
 	{
-		firstName.sendKeys(null);
+		primaryBorrowerInfoDropdown.click();
+	}
+	public void firstName()
+	{
+		firstName.sendKeys(testdata.firstName);
 	}
 	
+	public void middleName()
+	{
+		middleName.sendKeys(testdata.middleName);
+	}
+	
+	public void lastName()
+	{
+		lastName.sendKeys(testdata.lastName);
+	}
+	
+	public void emailAddress()
+	{
+		emailAddress.sendKeys(testdata.emailAddress);
+	}
+	
+	public void contactNumber()
+	{
+		contactNumber.sendKeys(testdata.contactNumber);
+	}
+
+	public void CellNumber()
+	{
+		cellNumber.sendKeys(testdata.middleName);
+	}
 	
 }
