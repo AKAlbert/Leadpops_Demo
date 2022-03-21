@@ -9,14 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.leadpops.utilities.ReadConfig;
+import com.leadpops.pageObjects.TestData;
 
 
 public class BaseClass {
-
-	ReadConfig readconfig = new ReadConfig();
+	TestData testData = new TestData();
 	
-	public String baseURL="https://dollarleadclub.com/";
+	public String baseURL= testData.baseURL;
 	public static WebDriver driver;
 	
 	public static Logger logger;
@@ -24,7 +23,8 @@ public class BaseClass {
 	@BeforeClass
 	public void setup()
 	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") 
+				+ testData.chromeDriverLocation);
 		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();

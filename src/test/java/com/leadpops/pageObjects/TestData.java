@@ -2,6 +2,8 @@ package com.leadpops.pageObjects;
 
 public class TestData {
 
+	public String baseURL = "https://dollarleadclub.com/";
+	public String chromeDriverLocation = "/Drivers/chromedriver";
 	String firstName = "Albert";
 	String lastName = "Ahimbisibwe";
 	String middleName = "Testing";

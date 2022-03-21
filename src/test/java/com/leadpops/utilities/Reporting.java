@@ -39,7 +39,7 @@ public class Reporting extends TestListenerAdapter
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Host name","localhost");
 		extent.setSystemInfo("Environemnt","Develop");
-		extent.setSystemInfo("user","Alebrt");
+		extent.setSystemInfo("user","Albert");
 		
 		htmlReporter.config().setDocumentTitle("Leadpops Test Project"); // Tile of report
 		htmlReporter.config().setReportName("Test Automation Report"); // name of the report
