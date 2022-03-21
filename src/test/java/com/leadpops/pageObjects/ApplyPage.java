@@ -1,9 +1,11 @@
 package com.leadpops.pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ApplyPage {
 
@@ -146,6 +148,10 @@ WebDriver ldriver;
 	
 	public void clickPrimaryBorrowerInfoDropdown()
 	{
+		JavascriptExecutor js = (JavascriptExecutor)ldriver;
+        
+        // This will scroll the page till the webelement is found
+        js.executeScript("arguments[0].scrollIntoView()", primaryBorrowerInfoDropdown );
 		primaryBorrowerInfoDropdown.click();
 	}
 	public void firstName()
@@ -178,4 +184,34 @@ WebDriver ldriver;
 		cellNumber.sendKeys(testdata.middleName);
 	}
 	
+	public void selectMonth()
+	{
+		monthPicker.click();
+		Select drop = new Select(monthPicker);
+		drop.selectByIndex(1);
+	}
+	
+	public void selectYear()
+	{
+		yearPicker.click();
+		Select drop = new Select(yearPicker);
+		drop.selectByIndex(1);
+	}
+	
+	public void selectDay()
+	{
+		dayPicker.click();
+		Select drop = new Select(dayPicker);
+		drop.selectByIndex(1);
+	}
+	
+	public void checkRentCheckbox()
+	{
+		rentCheckbox.click();
+	}
+	
+	public void enterEmployerAddress()
+	{
+		employerAddress.sendKeys(testdata.employerAddress);
+	}
 }
