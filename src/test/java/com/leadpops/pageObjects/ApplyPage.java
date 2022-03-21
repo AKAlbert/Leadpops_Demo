@@ -1,11 +1,16 @@
 package com.leadpops.pageObjects;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ApplyPage {
 
@@ -18,7 +23,7 @@ WebDriver ldriver;
 		PageFactory.initElements(rdriver, this);
 	}
 	
-	@FindBy(id="collapse-text_131")
+	@FindBy(xpath="//span[@id='collapse-text_179']")
 	WebElement borrowersDropdown;
 	
 	@FindBy(xpath="//label[@id='label_input_175_0']")
@@ -27,7 +32,7 @@ WebDriver ldriver;
 	@FindBy(xpath="//label[@id='label_input_175_1']")
 	WebElement twoBorrowerCheckbox;
 	
-	@FindBy(xpath="//div[@id='collapse_131']//span[@class='form-collapse-right form-collapse-right-hide']")
+	@FindBy(xpath="//span[@id='collapse-text_131']")
 	WebElement primaryBorrowerInfoDropdown;
 	
 	@FindBy(name="q1_firstName")
@@ -146,14 +151,23 @@ WebDriver ldriver;
 	
 	TestData testdata = new TestData();
 	
-	public void clickPrimaryBorrowerInfoDropdown()
+	public void performScroll()
 	{
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-        
-        // This will scroll the page till the webelement is found
-        js.executeScript("arguments[0].scrollIntoView()", primaryBorrowerInfoDropdown );
+//		js.executeScript("arguments[0].scrollIntoView(true)", primaryBorrowerInfoDropdown );
+		js.executeScript("window.scrollTo(0,500)");
+//		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	
+	public void switchToiframe() {
+		ldriver.switchTo().frame("211432822246953");
+	}
+	
+	public void clickPrimaryBorrowerInfoDropdown()
+	{
 		primaryBorrowerInfoDropdown.click();
 	}
+	
 	public void firstName()
 	{
 		firstName.sendKeys(testdata.firstName);

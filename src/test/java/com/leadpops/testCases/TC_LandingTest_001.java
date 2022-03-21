@@ -35,8 +35,21 @@ public class TC_LandingTest_001 extends BaseClass {
 		lp.clickOnlineApply();
 		logger.info("Clicked on Apply Online");
 		
+		ap.performScroll();
+		logger.info("Scrolling to view the element");
+		
+		ap.switchToiframe();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
 		ap.clickPrimaryBorrowerInfoDropdown();
 		logger.info("Clicked Primary Borrower Info");
+	
 		
 		ap.firstName();
 		logger.info("Entered First Name");
