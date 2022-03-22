@@ -4,14 +4,14 @@ This is a Demo Automation Project for Leadpops
 ## TestCase Automated   
 | Step              | Action        | Expected | Actual        | TestData      |
 | -------------     | ------------- | -------- | ------------- | ------------- |
-| Navigate to App   | launch URL    | url shd be opened  | waiting for test results          | Test1         |
-| Navigate to apply Page   | Click Apply Button    | Button shd be clicked and apply page launched  | waiting for test results          | Test1         |
-| verify page title  | check for the page title   | page shd return correct page title  |         | Test1         |
-| Go to apply Online   | Click on Apply online now     | apply page launched and apply modal appears  |         | Test1         |
+| Navigate to App   | launch URL    | url shd be opened  | waiting for test results          |          |
+| Navigate to apply Page   | Click Apply Button    | Button shd be clicked and apply page launched  | waiting for test results          |         |
+| verify page title  | check for the page title   | page shd return correct page title  |         |      |
+| Go to apply Online   | Click on Apply online now     | apply page launched and apply modal appears  |         |        |
 | Scroll into modal view   | Page shd scroll to view modal   | page shd scroll |           | Test1         |
 | Enter Test Data   | Test data entry into forms    | Data shd be entered   |          | Test1         |
-| Verify error messages   | verify meesage incase of incomplete forms    | error msg shd be displayed |         | Test1         |
-| Close the browser   | Close browser    | Browser shd be closed and test report generated |          | Test1         |
+| Verify error messages   | verify meesage incase of incomplete forms    | error msg shd be displayed |         |        |
+| Close the browser   | Close browser    | Browser shd be closed and test report generated |          |         |
 
 ## Framework Used
 This project was designed using a Hybrid framework consisting of Page Object Model (POM)
