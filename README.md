@@ -4,7 +4,7 @@ This is a Demo Automation Project for Leadpops
 ## TestCase Automated   
 | Step              | Action        | Expected | Actual        | TestData      |
 | -------------     | ------------- | -------- | ------------- | ------------- |
-| Navigate to App   | launch URL    | url should be opened  | waiting for test results          |       url   |
+| Navigate to App   | launch URL    | url should be opened  | waiting for test results          |  https://dollarleadclub.com/  |
 | Navigate to apply Page   | Click Apply Button    | Button should be clicked and apply page launched  | waiting for test results          |         |
 | verify page title  | check for the page title   | page should return correct page title  |         |      |
 | Go to apply Online   | Click on Apply online now     | apply page launched and apply modal appears  |         |        |
