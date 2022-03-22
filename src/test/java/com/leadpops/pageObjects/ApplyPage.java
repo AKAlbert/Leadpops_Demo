@@ -143,9 +143,17 @@ WebDriver ldriver;
 	@FindBy(name="q134_numberOf")
 	WebElement yearsInSchool;
 	
-	@FindBy(name="//div[@id='collapse_152']//span[@class='form-collapse-right form-collapse-right-hide']")
+	@FindBy(xpath="//span[@id='collapse-text_152']")
 	WebElement primaryBorrowerDeclaration;
 	
+	@FindBy(xpath="//span[@id='collapse-text_44']")
+	WebElement finalizeForm;
+	
+	@FindBy(xpath="//input[@id='input_30']")
+	WebElement clientApproval;
+	
+	@FindBy(xpath="//img[@id='input_37_captcha']")
+	WebElement captchaMessage;
 	
 	// Actions
 	
@@ -209,14 +217,14 @@ WebDriver ldriver;
 	{
 		yearPicker.click();
 		Select drop = new Select(yearPicker);
-		drop.selectByIndex(1);
+		drop.selectByIndex(30);
 	}
 	
 	public void selectDay()
 	{
 		dayPicker.click();
 		Select drop = new Select(dayPicker);
-		drop.selectByIndex(1);
+		drop.selectByIndex(3);
 	}
 	
 	public void checkRentCheckbox()
@@ -224,8 +232,87 @@ WebDriver ldriver;
 		rentCheckbox.click();
 	}
 	
+	public void currentResidenceAddress()
+	{
+		residenceAddress.sendKeys(testdata.residenceAddress);
+	}
+	
+	public void enterCity()
+	{
+		city.sendKeys(testdata.city);
+	}
+	
+	public void selectState()
+	{
+		state.click();
+		Select drop = new Select(state);
+		drop.selectByIndex(1);
+	}
+	
+	public void zipCode()
+	{
+		zipCode.sendKeys(testdata.city);
+	}
+	
+	public void yearsAtResidence()
+	{
+		yearsOnResidence.click();
+		Select drop = new Select(yearsOnResidence);
+		drop.selectByIndex(1);
+	}
+	
 	public void enterEmployerAddress()
 	{
 		employerAddress.sendKeys(testdata.employerAddress);
+	}
+	
+	public void employerPhoneNumber()
+	{
+		employerPhoneNumber.sendKeys(testdata.employerPhoneNumber);
+	}
+	
+	public void currentEmployer()
+	{
+		currentEmployer.sendKeys(testdata.currentEmployer);
+	}
+	
+	public void cityEmployer()
+	{
+		cityEmployer.sendKeys(testdata.cityEmployer);
+	}
+	
+	public void zipCodeEmployer()
+	{
+		zipCodeEmployer.sendKeys(testdata.zipCodeEmployer);
+	}
+	
+	public void position()
+	{
+		position.sendKeys(testdata.position);
+	}
+	
+	public void paidHourlyCheckbox()
+	{
+		paidHourly.click();
+	}
+	
+	public void yesSelfEmployed()
+	{
+		selfEmployed.click();
+	}
+	
+	public void primaryBorrowerDeclarations()
+	{
+		primaryBorrowerDeclaration.click();
+	}
+	
+	public void finalizeForm()
+	{
+		finalizeForm.click();
+	}
+	
+	public void clientApproval()
+	{
+		clientApproval.sendKeys(testdata.clientNames);
 	}
 }

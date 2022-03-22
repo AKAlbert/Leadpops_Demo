@@ -48,16 +48,57 @@ public class TC_LandingTest_001 extends BaseClass {
 		}	
 		
 		ap.clickPrimaryBorrowerInfoDropdown();
-		logger.info("Clicked Primary Borrower Info");
+		logger.info("Clicked Primary Borrower Info Dropdown");
 	
 		
 		ap.firstName();
-		logger.info("Entered First Name");
-		
 		ap.middleName();
 		ap.lastName();
+		ap.emailAddress();
+		ap.contactNumber();
+		ap.CellNumber();
+		logger.info("Entered all contact info");
 		
+		ap.selectMonth();
+		ap.selectDay();
+		ap.selectYear();
+		logger.info("Selected the Date of Birth ");
 		
+		ap.checkRentCheckbox();
+		ap.currentResidenceAddress();
+		ap.enterCity();
+		ap.selectState();
+		ap.zipCode();
+		ap.yearsAtResidence();
+		ap.currentEmployer();
+		ap.employerPhoneNumber();
+		ap.enterEmployerAddress();
+		ap.cityEmployer();
+		ap.zipCodeEmployer();
+		ap.position();
+		ap.paidHourlyCheckbox();
+		ap.yesSelfEmployed();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+		logger.info("Entered all the Primary Borrower Info");
+		
+		ap.finalizeForm();
+		logger.info("Clicked the Finalize form Droapdown");
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+		ap.clientApproval();
 	}
 	
 }

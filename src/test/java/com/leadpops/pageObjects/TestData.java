@@ -19,4 +19,8 @@ public class TestData {
 	String employerPhoneNumber = "0700221144";
 	String employerAddress = "Mbarara, Uganda";
 	String position = "Manager";
+	String cityEmployer = "Alaska";
+	String zipCodeEmployer = "100";
+	String grossMonthly = "2000";
+	String clientNames = "Albert AHimbisibwe";
 }
