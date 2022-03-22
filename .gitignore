@@ -1,0 +1,12 @@
+# ignore .metadata files
+*.metadata
+*/.metadata
+
+# Ignore .settings files
+*.settings
+*/.settings
+
+# Ignore Test Output Folder files
+*/test-output/
+/test-output/
+
