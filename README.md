@@ -4,14 +4,14 @@ This is a Demo Automation Project for Leadpops
 ## TestCase Automated   
 | Step              | Action        | Expected | Actual        | TestData      |
 | -------------     | ------------- | -------- | ------------- | ------------- |
-| Navigate to App   | launch URL    | url shd be opened  | waiting for test results          |          |
-| Navigate to apply Page   | Click Apply Button    | Button shd be clicked and apply page launched  | waiting for test results          |         |
-| verify page title  | check for the page title   | page shd return correct page title  |         |      |
+| Navigate to App   | launch URL    | url should be opened  | waiting for test results          |       url   |
+| Navigate to apply Page   | Click Apply Button    | Button should be clicked and apply page launched  | waiting for test results          |         |
+| verify page title  | check for the page title   | page should return correct page title  |         |      |
 | Go to apply Online   | Click on Apply online now     | apply page launched and apply modal appears  |         |        |
-| Scroll into modal view   | Page shd scroll to view modal   | page shd scroll |           |          |
-| Enter Test Data   | Test data entry into forms    | Data shd be entered   |          |         |
-| Verify error messages   | verify meesage incase of incomplete forms    | error msg shd be displayed |         |        |
-| Close the browser   | Close browser    | Browser shd be closed and test report generated |          |         |
+| Scroll into modal view   | Page should scroll to view modal   | page should scroll |           |          |
+| Enter Test Data   | Test data entry into forms    | Data should be entered   |          |         |
+| Verify error messages   | verify message incase of incomplete forms    | error msg should be displayed |         |        |
+| Close the browser   | Close browser    | Browser should be closed and test report generated |          |         |
 
 ## Framework Used
 This project was designed using a Hybrid framework consisting of Page Object Model (POM)
