@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import junit.framework.Assert;
+
 public class ApplyPage {
 
 WebDriver ldriver;
@@ -154,6 +156,12 @@ WebDriver ldriver;
 	
 	@FindBy(xpath="//img[@id='input_37_captcha']")
 	WebElement captchaMessage;
+	
+	@FindBy(xpath="//button[@id='input_33']")
+	WebElement submitBtn;
+	
+	@FindBy(xpath="//p[contains(text(),'There are errors on the form. Please fix them befo')]")
+	WebElement errorMsg;
 	
 	// Actions
 	
@@ -315,4 +323,19 @@ WebDriver ldriver;
 	{
 		clientApproval.sendKeys(testdata.clientNames);
 	}
+	
+	public void clickSubmitBtn()
+	{
+		submitBtn.click();
+	}
+	
+	public String verifyErrorMsg()
+	{
+		errorMsg.isDisplayed();
+		String errorMsgTxt = errorMsg.getText();
+		Assert.assertEquals(errorMsgTxt, testdata.errorMsg);
+		
+		return errorMsgTxt;
+	}
+	
 }

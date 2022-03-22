@@ -99,6 +99,10 @@ public class TC_LandingTest_001 extends BaseClass {
 		}	
 		
 		ap.clientApproval();
+		ap.clickSubmitBtn();
+		
+		// Verify the error message when data is missing in the form
+		ap.verifyErrorMsg();
 	}
 	
 }

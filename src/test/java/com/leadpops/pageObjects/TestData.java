@@ -23,4 +23,5 @@ public class TestData {
 	String zipCodeEmployer = "100";
 	String grossMonthly = "2000";
 	String clientNames = "Albert AHimbisibwe";
+	String errorMsg = "There are errors on the form. Please fix them before continuing.";
 }
