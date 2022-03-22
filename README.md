@@ -8,8 +8,8 @@ This is a Demo Automation Project for Leadpops
 | Navigate to apply Page   | Click Apply Button    | Button shd be clicked and apply page launched  | waiting for test results          |         |
 | verify page title  | check for the page title   | page shd return correct page title  |         |      |
 | Go to apply Online   | Click on Apply online now     | apply page launched and apply modal appears  |         |        |
-| Scroll into modal view   | Page shd scroll to view modal   | page shd scroll |           | Test1         |
-| Enter Test Data   | Test data entry into forms    | Data shd be entered   |          | Test1         |
+| Scroll into modal view   | Page shd scroll to view modal   | page shd scroll |           |          |
+| Enter Test Data   | Test data entry into forms    | Data shd be entered   |          |         |
 | Verify error messages   | verify meesage incase of incomplete forms    | error msg shd be displayed |         |        |
 | Close the browser   | Close browser    | Browser shd be closed and test report generated |          |         |
 
