@@ -14,7 +14,7 @@ This is a Demo Automation Project for Leadpops
 | Close the browser   | Close browser    | Browser shd be closed and test report generated |          | Test1         |
 
 ## Framework Used
-This project was designed using a Hybrid framework consisting of Page Object Model (POM) and Data Driven Framework
+This project was designed using a Hybrid framework consisting of Page Object Model (POM)
 
 ## List of Packages and Folders
 ### The Package used here include
@@ -32,4 +32,3 @@ The base class is used to handle all the globally used functions like before run
 
 ### Utilities Package
 This package is used to store utilities like the reporting, 
-
