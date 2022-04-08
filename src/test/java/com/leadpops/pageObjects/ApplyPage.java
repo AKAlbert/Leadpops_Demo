@@ -170,9 +170,7 @@ WebDriver ldriver;
 	public void performScroll()
 	{
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-//		js.executeScript("arguments[0].scrollIntoView(true)", primaryBorrowerInfoDropdown );
 		js.executeScript("window.scrollTo(0,500)");
-//		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
 	
 	public void switchToiframe() {
